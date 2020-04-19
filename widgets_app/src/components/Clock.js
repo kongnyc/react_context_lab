@@ -1,7 +1,9 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useContext } from 'react'
+import { ThemeContext } from '../providers/ThemeProvider';
+import '../css/Clock.css'
 
 const Clock =()=> {
-
+        const { theme } = useContext(ThemeContext)
         const [clock,setClock]= useState([])
         const updateTime=()=>{
             setInterval(() => {
@@ -14,8 +16,8 @@ const Clock =()=> {
         },[]);
 
         return (
-            <div>
-                <b>{clock.toLocaleString()}</b>
+            <div className={theme}>
+                <h1>{clock.toLocaleString()}</h1>
             </div>
         )
     }

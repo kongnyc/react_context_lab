@@ -9,7 +9,6 @@ const Forecast =({data})=> {
                 <p>{day.weather.description}</p>
                 <p>Temperature: {day.temp}°C</p>
                 <p>Feels Like: {day.app_temp}°C</p>
-
             </div>)
         })
 

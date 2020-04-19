@@ -4,11 +4,13 @@ import NavBar from "./components/NavBar"
 import Homepage from "./components/Homepage"
 import Weather from "./components/Weather"
 import Clock from "./components/Clock"
+import ThemeProvider from "./providers/ThemeProvider"
 
 
 function App() {
   return (
     <div className="App">
+    <ThemeProvider>
     <NavBar/>
       <Switch>
         <Route exact path={"/"}>
@@ -21,6 +23,7 @@ function App() {
           <Clock/>
         </Route>
       </Switch>
+    </ThemeProvider>
     </div>
   );
 }

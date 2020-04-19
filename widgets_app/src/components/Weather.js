@@ -24,7 +24,6 @@ const Weather =()=> {
  
     useEffect(()=>{
         fetchLocation();
-    //   fetchWeather()
     },[]);
 
         // console.log(weather)
